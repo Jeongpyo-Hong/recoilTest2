@@ -1,8 +1,11 @@
-import "./App.css";
-import Router from "./shared/Router";
+import ToDoList from "./components/TodoList";
 
 function App() {
-  return <Router />;
+  return (
+    <>
+      <ToDoList />
+    </>
+  );
 }
 
 export default App;
