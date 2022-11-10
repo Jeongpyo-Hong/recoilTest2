@@ -4,7 +4,11 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { categoryState, todoState } from "../atoms";
 
 const CreateTodo = () => {
+  // useSetRecoilState는 데이터를 변경해야 할 때 사용한다.
   const setTodos = useSetRecoilState(todoState);
+
+  // useRecoilValue로 category 값을 가져온다.
+  // TodoList.jsx에서 카테고리 value 값을 변경한 것이 저장되어 있다.
   const category = useRecoilValue(categoryState);
   const { register, handleSubmit, setValue } = useForm();
   const onSubmit = ({ todo }) => {

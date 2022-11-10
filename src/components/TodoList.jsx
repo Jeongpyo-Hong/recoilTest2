@@ -5,8 +5,13 @@ import CreateTodo from "./CreateTodo";
 import Todo from "./Todo";
 
 const TodoList = () => {
+  // useRecoilValue로 atom 값 그대로를 가져온다.
   const todos = useRecoilValue(todoSelector);
+
+  // useRecoilState는 useState 사용한다고 생각하면 이해가 쉽다.
   const [category, setCategory] = useRecoilState(categoryState);
+
+  // selcet태그의 onInput 속성을 활용하여 value값 가져온다.
   const onInput = (e) => {
     setCategory(e.currentTarget.value);
   };
